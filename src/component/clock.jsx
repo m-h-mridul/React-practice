@@ -1,4 +1,5 @@
 import React from "react";
+import Buttonuser from "./buttonuse.jsx"
 
 class Clock extends React.Component {
     constructor(props) {
@@ -20,13 +21,13 @@ class Clock extends React.Component {
         clearInterval(this.clocltimer);
     }
 
-    handleclick = (local) => {
-        // this.setState({
-        //     local: 'en-US'
-        // });
+    handleclick =(local)=>  {
         this.setState({
-            local:local
+            local: 'en-US'
         });
+        // this.setState({
+        //     local: local
+        // });
     }
     render() {
         return (
@@ -34,10 +35,11 @@ class Clock extends React.Component {
                 <h1>
                     {this.state.date.toLocaleTimeString(this.state.local)}
                 </h1>
-                <button onClick={this.handleclick.bind('en-US')}>
+                <Buttonuser buttonclick={this.handleclick} peramater='en-Us'></Buttonuser>
+                <button onClick={()=>this.handleclick('en-US')}>
                     click here
                 </button>
-                <a href="../pages/catagories.jsx">go to next pages</a>
+                {/* <a href="../pages/catagories.jsx">go to next pages</a> */}
             </div>
         );
     }

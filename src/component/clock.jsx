@@ -21,23 +21,26 @@ class Clock extends React.Component {
         clearInterval(this.clocltimer);
     }
 
-    handleclick =(local)=>  {
+    handleclick = (cheak) => {
         this.setState({
-            local: 'en-US'
+            local: cheak ,
         });
-        // this.setState({
-        //     local: local
-        // });
     }
     render() {
+        const cheak = true;
+        
         return (
             <div>
                 <h1>
                     {this.state.date.toLocaleTimeString(this.state.local)}
                 </h1>
-                <Buttonuser buttonclick={this.handleclick} peramater='en-Us'></Buttonuser>
-                <button onClick={()=>this.handleclick('en-US')}>
-                    click here
+                
+                    <Buttonuser buttonclick={this.handleclick} peramater='en-Us'></Buttonuser> 
+                    <Buttonuser buttonclick={this.handleclick} peramater='bn-BD'></Buttonuser>
+                <br />
+
+                <button onClick={() => this.handleclick('en-US')}>
+                    {this.state.local === 'en-US' ? 'click here' : 'চাপুন '}
                 </button>
                 {/* <a href="../pages/catagories.jsx">go to next pages</a> */}
             </div>

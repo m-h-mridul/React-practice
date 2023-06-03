@@ -15,8 +15,9 @@ class Buttonuse extends React.Component {
         const { buttonclick, peramater } = this.props;
         return (
             <div>
-                <button onClick={()=>buttonclick(peramater)}>
-                    Click me Another class 
+                <button onClick={() => buttonclick(peramater)}>
+                    {peramater === 'bn-BD' ?
+                        'বাংলা ঘড়ি' : 'Click me Another class'}
                 </button>
             </div>
         );

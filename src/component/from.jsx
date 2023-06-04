@@ -33,8 +33,6 @@ export default class App extends React.Component {
         //     console.log(e.target.checked);
         // }
 
-
-
     };
 
     submitHandler = (e) => {
@@ -64,7 +62,7 @@ export default class App extends React.Component {
                     <br />
                     <br />
 
-                    <select value={libaray} name='libaray'
+                   <select value={libaray} name='libaray'
                         onChange={this.handleChange} >
                         <option value="React">React</option>
                         <option value="Anguler">Angular</option>

@@ -6,6 +6,7 @@ import Participant from './pages/participant';
 import Sidebar from './component/sidebar';
 import Clock from './component/clock';
 import From from "./component/from"
+import TemperatureView from "./component/temperaterCalview";
 
 
 
@@ -14,8 +15,8 @@ function App() {
     <div>
       {/* <Clock local="bn-BD" />
       <Sidebar /> */}
-      <From/>
-
+      {/* <From/> */}
+      <TemperatureView/>
 
     </div>
   )
